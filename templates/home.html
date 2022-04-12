@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="shadow p-3 mb-5 bg-white rounded">
+  <h1 style="color:rgb(0, 102, 255)">Welcome to the Product recommender</h1>
+  <h3 style="color:rgb(0, 102, 255)">Enter the Product Name you like to get recommendations.</h3>
+</div>
+
+  <form action="{{url_for('recommend')}}">
+    <input type="text" name="product" class="form-control" placeholder="Product name here">
+    <br>
+    <input type="number" name="number" class="form-control" placeholder="Number of recommendation here">
+    <br>
+    <input type="submit" class="btn btn-info" value="Enter">
+  </form>
+{% endblock %}
